@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>دعوة مناقشة مشروع تخرج</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--sky:#4aa8f0;--sky2:#bfe3fb;--deep:#1683dc}
+*{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:#dcefff;display:flex;justify-content:center;padding:16px;font-family:'Cairo',Tahoma,sans-serif;color:#000}
+.card{position:relative;width:100%;max-width:460px;border-radius:22px;overflow:hidden;text-align:center;padding:48px 22px 46px;background:linear-gradient(180deg,var(--sky) 0,var(--sky2) 70px,#fff 70px,#fff calc(100% - 70px),var(--sky2) calc(100% - 70px),var(--sky) 100%);border:3px solid var(--deep);box-shadow:0 10px 30px rgba(22,131,220,.35)}
+.card:before{content:"";position:absolute;inset:8px;border:1.5px solid var(--deep);border-radius:15px;pointer-events:none}
+.wm{position:absolute;inset:0;width:100%;height:100%;opacity:.13;pointer-events:none}
+.c{position:relative;z-index:1}
+.bas{font-family:'Amiri',serif;font-size:27px;margin:0 0 10px;font-weight:700}
+.ayah{font-family:'Amiri',serif;font-size:22px;margin:0 0 12px;font-weight:700}
+.div{height:3px;width:120px;margin:12px auto;background:linear-gradient(90deg,transparent,var(--deep),transparent)}
+.hamd{font-family:'Amiri',serif;font-size:20px;line-height:1.9;margin:0 0 10px;font-weight:700}
+.txt{font-size:15px;line-height:1.9;margin:0 0 8px;font-weight:600}
+.title{font-family:'Amiri',serif;font-size:23px;line-height:1.7;font-weight:700;background:var(--sky2);border:2px solid var(--deep);border-radius:14px;padding:12px 14px;margin:10px 0 16px}
+.lbl{font-size:15px;margin:0;font-weight:700}
+.name{font-family:'Amiri',serif;font-size:31px;font-weight:700;margin:2px 0 14px}
+.info{display:flex;gap:8px;justify-content:center;margin:14px 0 6px}
+.it{flex:1;background:#fff;border:2px solid var(--deep);border-radius:14px;padding:10px 4px}
+.it svg{width:28px;height:28px;stroke:var(--deep);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.it b{display:block;font-size:13px;margin:3px 0 2px}
+.it span{font-size:13px;line-height:1.5;display:block;font-weight:600}
+.end{font-family:'Amiri',serif;font-size:21px;margin:16px 0 0;font-weight:700}
+
+.card{display:none}
+.shown .card{display:block;animation:rise .9s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(40px) scale(.94)}to{opacity:1;transform:none}}
+.ew{width:100%;max-width:380px;margin:auto;text-align:center;min-height:70vh;display:flex;flex-direction:column;justify-content:center;transition:opacity .5s,transform .5s}
+.ew.out{opacity:0;transform:translateY(30px)}
+.env{position:relative;width:100%;aspect-ratio:1.4;cursor:pointer;perspective:900px;filter:drop-shadow(0 12px 18px rgba(22,131,220,.4));-webkit-tap-highlight-color:transparent}
+.env div{position:absolute}
+.eb{inset:0;background:#8fcaf7;border-radius:10px}
+.el{inset:0;background:#4aa8f0;clip-path:polygon(0 0,50% 55%,0 100%);border-radius:10px}
+.er{inset:0;background:#4aa8f0;clip-path:polygon(100% 0,50% 55%,100% 100%);border-radius:10px}
+.eu{inset:0;background:#2f93e6;clip-path:polygon(0 100%,50% 45%,100% 100%);border-radius:10px;z-index:2}
+.ef{left:0;top:0;width:100%;height:56%;background:#1683dc;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .8s ease;z-index:3}
+.env.open .ef{transform:rotateX(180deg);z-index:1}
+.lab{left:50%;top:62%;transform:translate(-50%,-50%);z-index:4;background:#fff;color:#000;border:2px solid #1683dc;border-radius:50%;padding:14px;line-height:0;font-family:'Amiri',serif;font-weight:700;font-size:26px;white-space:nowrap;transition:opacity .4s}
+.env.open .lab{opacity:0}
+.hint{margin:22px 0 0;font-weight:700;font-size:16px;color:#000;animation:pulse 1.6s infinite}
+@keyframes pulse{50%{opacity:.4}}
+</style>
+</head>
+<body>
+<div class="ew" id="ew"><div class="env" id="env" role="button" tabindex="0" aria-label="افتح الدعوة"><div class="eb"></div><div class="el"></div><div class="er"></div><div class="ef"></div><div class="eu"></div><div class="lab"><svg viewBox="0 0 64 64" width="54" height="54" fill="none" stroke="#1683dc" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 24 32 10l28 14-28 14z" fill="#bfe3fb"/><path d="M16 31v14c0 6 32 6 32 0V31"/><path d="M60 24v18"/><circle cx="60" cy="46" r="3" fill="#1683dc"/></svg></div></div><p class="hint">اضغط على الظرف لفتح الدعوة</p></div>
+<div class="card">
+<svg class="wm" viewBox="0 0 460 760" preserveAspectRatio="xMidYMid slice" fill="none" stroke="#1683dc" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+<g transform="translate(40,70) scale(1.5)"><path d="M10 20c0-14 14-18 24-12 10-6 24-2 24 12 0 12-6 18-8 38-1 8-4 14-8 14s-5-8-8-8-4 8-8 8-7-6-8-14C16 38 10 32 10 20z"/></g>
+<g transform="translate(290,40) scale(1.3)"><path d="M10 40 60 18l50 22-50 22z"/><path d="M30 52v22c0 8 60 8 60 0V52"/><path d="M110 40v34"/><circle cx="110" cy="78" r="5"/></g>
+<g transform="translate(180,300) scale(2.2)"><rect x="22" y="0" width="36" height="22" rx="10"/><path d="M26 30h28M26 40h28M28 50h24M30 60h20M33 70h14"/><path d="M26 26l-6 4 6 4M54 26l6 4-6 4"/><path d="M40 78v10"/></g>
+<g transform="translate(40,560) scale(1.4)"><rect x="0" y="0" width="90" height="62" rx="8"/><path d="M12 50l18-18 14 12 16-24 18 20"/><circle cx="24" cy="16" r="5"/></g>
+<g transform="translate(300,590)"><circle cx="50" cy="50" r="44"/><circle cx="50" cy="50" r="28"/><path d="M50 6v14M50 80v14M6 50h14M80 50h14"/></g>
+</svg>
+<div class="c">
+<p class="bas">بسم الله الرحمن الرحيم</p>
+<p class="ayah">﴿ وَفَوْقَ كُلِّ ذِي عِلْمٍ عَلِيمٌ ﴾</p>
+<div class="div"></div>
+<p class="hamd">الحمد لله الذي أنعم وأتم وأكرم</p>
+<p class="txt">بفضل الله ومنّته نتشرف بدعوتكم لحضور مناقشة مشروع تخرجي لنيل درجة البكالوريوس في طب الأسنان وجراحتها تحت عنوان:</p>
+<div class="title">( إعادة تأهيل الفم والأسنان باستخدام طب الأسنان الرقمي )</div>
+<p class="lbl">الدكتور</p>
+<p class="name">( عمر أحمد السرور )</p>
+<div class="div"></div>
+<div class="info">
+<div class="it"><svg viewBox="0 0 24 24"><path d="M12 22s7-6.3 7-12a7 7 0 0 0-14 0c0 5.7 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><b>الموقع</b><span>الجامعة الدولية الخاصة للعلوم والتكنولوجيا IUST</span></div>
+<div class="it"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><b>التاريخ</b><span>6/2/2027</span></div>
+<div class="it"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b>الوقت</b><span>11 صباحاً</span></div>
+</div>
+<p class="end">بحضوركم نرتقي فخراً ونزداد علماً</p>
+</div>
+</div>
+<script>
+(function(){var e=document.getElementById('env'),w=document.getElementById('ew');
+function go(){if(e.classList.contains('open'))return;e.classList.add('open');
+setTimeout(function(){w.classList.add('out')},900);
+setTimeout(function(){w.style.display='none';document.body.classList.add('shown');window.scrollTo(0,0)},1400)}
+e.addEventListener('click',go);e.addEventListener('keydown',function(k){if(k.key==='Enter'||k.key===' ')go()})})();
+</script>
+</body>
+</html>
